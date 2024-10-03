@@ -1,0 +1,51 @@
+﻿HTML
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 - Lista 2</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Lista</h1>
+        <input type="number" id="entradaNumero" placeholder="Digite a quantidade de itens">
+        <button id="botaoEnviar">Gerar Lista</button>
+        <div id="mensagem" class="mensagem"></div>
+        <ul id="listaItens" class="lista-itens"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+---------------------------------------------------------------------------------------------------
+body{
+  padding: 25px;
+}
+.title {
+	color: #5C6AC4;
+}
+----------------------------------------------------------------------------------------------------
+
+JavaScript
+
+document.getElementById("botaoEnviar").addEventListener("click", function() {
+    const entradaNumero = document.getElementById("entradaNumero").value;
+    const mensagem = document.getElementById("mensagem");
+    const listaItens = document.getElementById("listaItens");
+    
+    mensagem.textContent = '';
+    listaItens.innerHTML = '';
+
+    const numero = parseInt(entradaNumero);
+    if (isNaN(numero) || numero <= 0) {
+        mensagem.textContent = "Por Favor, insira um número válido";
+    } else {
+        for (let i = 1; i <= numero; i++) {
+            const itemLista = document.createElement("li");
+            itemLista.textContent = `Pedro Cardoso`;
+            listaItens.appendChild(itemLista);
+        }
+    }
+});
