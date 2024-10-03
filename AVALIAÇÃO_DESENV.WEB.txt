@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Exercício 1 - Lista 2</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Reinaldo Silva">
+
+  </head>
+  <body>
+    
+      <h1>Bem-Vindo!</h1>
+      <p>Digite o seu nome:</p>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome">
+      <button onClick="exibirNome()">Clique aqui</button>
+      <p id="mensagem">Por favor, insira seu nome</p>
+
+      <script src="script.js"></script>
+      
+  </body>
+</html>
+----------------------------------------------------------------------------------------------
+body{
+  padding: 25px;
+}
+.title {
+	color: #5C6AC4;
+}
+----------------------------------------------------------------------------------------------
+function exibirNome(){
+  
+	let nome = document.getElementById("nome").value;
+  
+	let mensagem = document.getElementById("mensagem");
+  
+	let aluno = "Reinaldo Silva";
+  
+  
+
+	if(nome != ''){
+    
+		mensagem.innerHTML = "Olá " + nome + "! Seja bem-vindo a página do " + aluno;
+ 
+	} else {
+    
+		mensagem.innerHTML = "Por favor, insira seu nome";
+  
+	  }
+  
+
+}
