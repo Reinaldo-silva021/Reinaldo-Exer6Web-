@@ -2,7 +2,7 @@
 <html>
   <head>
 
-    <title>ExercÌcio 1 - Lista 2</title>
+    <title>Exerc√≠cio 1 - Lista 2</title>
     <meta charset="UTF-8">
     <meta name="author" content="Reinaldo Silva">
 
@@ -39,7 +39,7 @@ function exibirNome(){
 
 	if(nome != ''){
     
-		mensagem.innerHTML = "Ol· " + nome + "! Seja bem-vindo a p·gina do " + aluno;
+		mensagem.innerHTML = "Ol√° " + nome + "! Seja bem-vindo a p√°gina do " + aluno;
  
 	} else {
     
